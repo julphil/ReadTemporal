@@ -1,0 +1,23 @@
+/**
+* Name: displayTemporal
+* Author: julien
+* Description: Create a new experiment file
+* Tags: Tag1, Tag2, TagN
+*/
+model experiementTemporal
+
+import "temporalNerv.gaml"
+
+experiment displayTemporal type:gui {
+	parameter 'Data file' var:fileName category:"Simulation parameter" init:"result_1m_l5.0_mean_temporal.txt";
+	
+	parameter 'Space length' var: spaceLength category:"Space parameter" unit:"Meter" init:60;
+	parameter 'Space width' var: spaceWidth category:"Space parameter" unit:"Meter" init:7;
+	
+	output {
+		display SocialForceModel_Field type:opengl{
+            species field aspect:aspectNervousness;
+        }
+
+	}
+}
